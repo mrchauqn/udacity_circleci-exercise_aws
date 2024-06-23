@@ -16,9 +16,9 @@ jobs:
       - run:
           name: Build and push Docker image
           command: |
-            echo "Inside the Build and push Docker image step"
+            echo "Inside the Build and push Docker image step - chaudm editted"
             docker --version # print the version for logging
-            docker build -t sudkul/sample-express-app .        
-            docker tag sudkul/sample-express-app sudkul/sample-express-app:1.0.0
+            docker build -t mrchau1210/sample-express-app-chaudm-fpt .        
+            docker tag mrchau1210/sample-express-app-chaudm-fpt mrchau1210/sample-express-app-chaudm-fpt:1.0.0
             echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-            docker push sudkul/sample-express-app:1.0.0
+            docker push mrchau1210/sample-express-app-chaudm-fpt:1.0.0
